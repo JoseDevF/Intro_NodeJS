@@ -1,3 +1,4 @@
+
 /* Objetos  */
 
 // Crear un objeto utilizando la sintaxis de llaves
