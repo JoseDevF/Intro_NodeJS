@@ -1,0 +1,2 @@
+JSON -> javascript object notation
+NPM -> node package manager
