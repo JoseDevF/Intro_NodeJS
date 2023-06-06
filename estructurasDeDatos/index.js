@@ -13,7 +13,7 @@ class Person {
 
 const Hugo = new Person('Hugo', 'Prieto')
 
-console.log(Hugo.hi())
+// console.log(Hugo.hi())
 
 function PersonFunc (firstName, lastName) {
   const fullName = `${firstName} ${lastName}`
@@ -29,4 +29,20 @@ function PersonFunc (firstName, lastName) {
 
 const Estefania = PersonFunc('Estefania', 'Hernandez')
 
-console.log(Estefania.hi())
+// console.log(Estefania.hi())
+
+/* Intro programación funcional */
+// Función de primera clase
+const smsSaludo = str => str
+// console.log(smsSaludo('Hola mundo como parametro'))
+
+// Función de orden superior
+const funcionPrincipal = (callback, n1, n2) => {
+  return callback(n1, n2)
+}
+
+const suma = (n1 = 0, n2 = 0) => n1 + n2
+
+console.log(funcionPrincipal(function (n1, n2) {
+  return n1 + n2
+}, 10, 20))
