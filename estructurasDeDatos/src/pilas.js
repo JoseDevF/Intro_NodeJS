@@ -10,7 +10,7 @@ function Pila () {
   // longitud
   const size = () => items.length
   // llamar todos los valores
-  const getItems = () => [...items]
+  const getItems = () => structuredClone(items)
   // validar si esta vacio
   const isEmpty = () => items.length === 0
 
@@ -31,4 +31,5 @@ pila.push(1)
 pila.push(2)
 pila.push(3)
 console.log(pila.size())
+console.log(pila.getItems())
 console.log(pila.isEmpty())

@@ -43,6 +43,4 @@ const funcionPrincipal = (callback, n1, n2) => {
 
 const suma = (n1 = 0, n2 = 0) => n1 + n2
 
-console.log(funcionPrincipal(function (n1, n2) {
-  return n1 + n2
-}, 10, 20))
+console.log(funcionPrincipal(suma, 10, 20))
