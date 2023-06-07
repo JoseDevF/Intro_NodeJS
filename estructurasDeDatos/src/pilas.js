@@ -2,25 +2,17 @@ function Pila () {
   const items = []
 
   // agregar
-  function push (item) {
-    items.push(item)
-  }
+  const push = (item) => items.push(item)
   // borrar
-  function pop () {
-    items.pop()
-  }
+  const pop = () => items.pop()
   // calcular el ultimo
-  function peek () {
-    return items[items.length - 1]
-  }
+  const peek = () => items[items.length - 1]
   // longitud
   const size = () => items.length
   // llamar todos los valores
-  function getItems () {
-    return items
-  }
+  const getItems = () => [...items]
   // validar si esta vacio
-  const isEmpty = items.length === 0
+  const isEmpty = () => items.length === 0
 
   return {
     push,
@@ -34,8 +26,9 @@ function Pila () {
 
 const pila = Pila()
 
-console.log(pila.isEmpty)
-pila.push('a')
-pila.push('b')
-pila.push('c')
-console.log(pila.getItems())
+console.log(pila.isEmpty())
+pila.push(1)
+pila.push(2)
+pila.push(3)
+console.log(pila.size())
+console.log(pila.isEmpty())
