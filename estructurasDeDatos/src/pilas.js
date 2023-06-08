@@ -24,12 +24,24 @@ function Pila () {
   }
 }
 
-const pila = Pila()
+const newPila = Pila()
 
-console.log(pila.isEmpty())
-pila.push(1)
-pila.push(2)
-pila.push(3)
-console.log(pila.size())
-console.log(pila.getItems())
-console.log(pila.isEmpty())
+console.log(newPila.isEmpty())
+newPila.push(1)
+newPila.push(2)
+newPila.push(3)
+newPila.push(4)
+newPila.push(10)
+newPila.push(20)
+console.log(newPila.size())
+console.log(newPila.getItems())
+console.log(newPila.isEmpty())
+
+const user = {
+  name: 'Marisol',
+  isDiscount: (age) => age >= 18,
+  login: true
+}
+
+console.log({ ...user, isDiscount: user.isDiscount(20) })
+// const copyUser = structuredClone(user)

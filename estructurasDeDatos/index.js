@@ -37,10 +37,18 @@ const smsSaludo = str => str
 // console.log(smsSaludo('Hola mundo como parametro'))
 
 // Función de orden superior
-const funcionPrincipal = (callback, n1, n2) => {
+const funcionPrincipal = (callback, { n1, n2 }) => {
   return callback(n1, n2)
 }
 
 const suma = (n1 = 0, n2 = 0) => n1 + n2
+const resta = (n1 = 0, n2 = 0) => n1 - n2
 
-console.log(funcionPrincipal(suma, 10, 20))
+const numbers = {
+  n1: 10,
+  n2: 20
+}
+
+console.log(funcionPrincipal(suma, numbers))
+console.log(funcionPrincipal(resta, numbers))
+console.log(funcionPrincipal(resta, { n1: 20, n2: 30 }))
